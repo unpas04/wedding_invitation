@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -32,7 +33,8 @@
             user-select: none;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             min-height: 100%;
         }
@@ -259,12 +261,19 @@
         .scroll-indicator-line {
             width: 1px;
             height: 20px;
-            background: linear-gradient(to bottom, rgba(244,241,236,0.6), transparent);
+            background: linear-gradient(to bottom, rgba(244, 241, 236, 0.6), transparent);
         }
 
         @keyframes floatDown {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(4px); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(4px);
+            }
         }
 
         /* 스크롤 reveal */
@@ -272,7 +281,7 @@
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
-                        transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
         .reveal.is-visible {
@@ -280,10 +289,21 @@
             transform: translateY(0);
         }
 
-        .reveal.delay-1 { transition-delay: 0.15s; }
-        .reveal.delay-2 { transition-delay: 0.3s; }
-        .reveal.delay-3 { transition-delay: 0.45s; }
-        .reveal.delay-4 { transition-delay: 0.6s; }
+        .reveal.delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .reveal.delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal.delay-3 {
+            transition-delay: 0.45s;
+        }
+
+        .reveal.delay-4 {
+            transition-delay: 0.6s;
+        }
 
         /* 풀블리드 이미지 */
         .image-section {
@@ -338,12 +358,12 @@
             z-index: 3;
             background:
                 linear-gradient(to bottom,
-                    rgba(14,14,14,0.55) 0%,
-                    rgba(14,14,14,0.15) 18%,
-                    rgba(14,14,14,0) 35%,
-                    rgba(14,14,14,0) 55%,
-                    rgba(14,14,14,0.4) 78%,
-                    rgba(14,14,14,0.85) 100%);
+                    rgba(14, 14, 14, 0.55) 0%,
+                    rgba(14, 14, 14, 0.15) 18%,
+                    rgba(14, 14, 14, 0) 35%,
+                    rgba(14, 14, 14, 0) 55%,
+                    rgba(14, 14, 14, 0.4) 78%,
+                    rgba(14, 14, 14, 0.85) 100%);
         }
 
         /* 눈 입자 */
@@ -476,7 +496,7 @@
             opacity: 0;
             transform: translateY(20px);
             animation: fadeUp 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) 1.1s forwards;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
         }
 
         .names .amp {
@@ -508,8 +528,15 @@
         }
 
         @keyframes expandV {
-            from { opacity: 0; height: 0; }
-            to { opacity: 1; height: 32px; }
+            from {
+                opacity: 0;
+                height: 0;
+            }
+
+            to {
+                opacity: 1;
+                height: 32px;
+            }
         }
 
         .date-info {
@@ -540,7 +567,9 @@
         }
 
         @keyframes fadeIn {
-            to { opacity: 1; }
+            to {
+                opacity: 1;
+            }
         }
 
         /* 하단 우측 숫자 */
@@ -570,32 +599,96 @@
         }
 
         @media (max-width: 480px) {
-            .names { font-size: 68px; }
-            .names .amp { font-size: 54px; }
-            .hero-text { padding: 0 24px 52px; }
-            .inv-title-script { font-size: 60px; }
-            .inv-paragraph { font-size: 13px; line-height: 2.1; }
-            .inv-inner { padding: 80px 32px; }
+            .names {
+                font-size: 68px;
+            }
+
+            .names .amp {
+                font-size: 54px;
+            }
+
+            .hero-text {
+                padding: 0 24px 52px;
+            }
+
+            .inv-title-script {
+                font-size: 60px;
+            }
+
+            .inv-paragraph {
+                font-size: 13px;
+                line-height: 2.1;
+            }
+
+            .inv-inner {
+                padding: 80px 32px;
+            }
         }
 
         @media (max-width: 360px) {
-            .names { font-size: 58px; }
-            .names .amp { font-size: 46px; }
-            .names-kr { font-size: 10px; letter-spacing: 5px; }
-            .eyebrow { font-size: 9px; letter-spacing: 4px; }
-            .inv-title-script { font-size: 52px; }
-            .inv-paragraph { font-size: 12.5px; line-height: 2; letter-spacing: 0.3px; }
-            .inv-inner { padding: 70px 28px; }
-            .inv-family-row { font-size: 11.5px; gap: 10px; }
-            .inv-family-connector { font-size: 9px; letter-spacing: 1.5px; }
+            .names {
+                font-size: 58px;
+            }
+
+            .names .amp {
+                font-size: 46px;
+            }
+
+            .names-kr {
+                font-size: 10px;
+                letter-spacing: 5px;
+            }
+
+            .eyebrow {
+                font-size: 9px;
+                letter-spacing: 4px;
+            }
+
+            .inv-title-script {
+                font-size: 52px;
+            }
+
+            .inv-paragraph {
+                font-size: 12.5px;
+                line-height: 2;
+                letter-spacing: 0.3px;
+            }
+
+            .inv-inner {
+                padding: 70px 28px;
+            }
+
+            .inv-family-row {
+                font-size: 11.5px;
+                gap: 10px;
+            }
+
+            .inv-family-connector {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
         }
 
         @media (min-width: 481px) {
-            .names { font-size: 88px; }
-            .names .amp { font-size: 70px; }
-            .inv-title-script { font-size: 76px; }
-            .inv-paragraph { font-size: 15px; }
-            .gallery-intro-title { font-size: 80px; }
+            .names {
+                font-size: 88px;
+            }
+
+            .names .amp {
+                font-size: 70px;
+            }
+
+            .inv-title-script {
+                font-size: 76px;
+            }
+
+            .inv-paragraph {
+                font-size: 15px;
+            }
+
+            .gallery-intro-title {
+                font-size: 80px;
+            }
         }
 
         /* ========================================
@@ -640,7 +733,7 @@
             color: #f4f1ec;
             letter-spacing: -1px;
             margin-bottom: 16px;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .gallery-sub {
@@ -772,12 +865,19 @@
         }
 
         @media (max-width: 480px) {
-            .gallery-title { font-size: 62px; }
+            .gallery-title {
+                font-size: 62px;
+            }
         }
 
         @media (max-width: 360px) {
-            .gallery-title { font-size: 54px; }
-            .gallery-slide { max-width: 300px; }
+            .gallery-title {
+                font-size: 54px;
+            }
+
+            .gallery-slide {
+                max-width: 300px;
+            }
         }
 
         /* ========================================
@@ -854,24 +954,56 @@
         }
 
         /* location 검정 텍스트 오버라이드 */
-        .location-section .section-script { color: #1f1c18; text-shadow: none; }
-        .location-section .section-sub { color: rgba(42,35,28,0.65); }
-        .location-section .section-divider { background: rgba(42,35,28,0.3); }
-        .location-section .location-name { color: #1f1c18; }
-        .location-section .location-addr { color: rgba(42,35,28,0.7); }
-        .location-section .map-btn {
-            border-color: rgba(42,35,28,0.3);
+        .location-section .section-script {
+            color: #1f1c18;
+            text-shadow: none;
+        }
+
+        .location-section .section-sub {
+            color: rgba(42, 35, 28, 0.65);
+        }
+
+        .location-section .section-divider {
+            background: rgba(42, 35, 28, 0.3);
+        }
+
+        .location-section .location-name {
             color: #1f1c18;
         }
+
+        .location-section .location-addr {
+            color: rgba(42, 35, 28, 0.7);
+        }
+
+        .location-section .map-btn {
+            border-color: rgba(42, 35, 28, 0.3);
+            color: #1f1c18;
+        }
+
         .location-section .map-btn:hover {
-            background: rgba(42,35,28,0.08);
+            background: rgba(42, 35, 28, 0.08);
             border-color: #1f1c18;
         }
-        .location-section .transport-list { border-top-color: rgba(42,35,28,0.3); }
-        .location-section .transport-item { border-bottom-color: rgba(42,35,28,0.3); }
-        .location-section .transport-toggle { color: #1f1c18; }
-        .location-section .transport-toggle .arrow { color: #6b645a; }
-        .location-section .transport-body { color: #2a2723; }
+
+        .location-section .transport-list {
+            border-top-color: rgba(42, 35, 28, 0.3);
+        }
+
+        .location-section .transport-item {
+            border-bottom-color: rgba(42, 35, 28, 0.3);
+        }
+
+        .location-section .transport-toggle {
+            color: #1f1c18;
+        }
+
+        .location-section .transport-toggle .arrow {
+            color: #6b645a;
+        }
+
+        .location-section .transport-body {
+            color: #2a2723;
+        }
 
         /* 오시는 길 하단 사진 */
         .location-photo {
@@ -1004,7 +1136,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                        padding 0.3s ease;
+                padding 0.3s ease;
             word-break: keep-all;
         }
 
@@ -1064,7 +1196,7 @@
             background: rgba(255, 252, 247, 0.85);
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 12px rgba(42,35,28,0.06);
+            box-shadow: 0 2px 12px rgba(42, 35, 28, 0.06);
         }
 
         .account-card-header {
@@ -1078,7 +1210,7 @@
         }
 
         .account-card-header:active {
-            background: rgba(42,35,28,0.04);
+            background: rgba(42, 35, 28, 0.04);
         }
 
         .account-card-header-left {
@@ -1127,7 +1259,7 @@
         .account-card-divider {
             width: 100%;
             height: 1px;
-            background: rgba(42,35,28,0.1);
+            background: rgba(42, 35, 28, 0.1);
             margin-bottom: 18px;
         }
 
@@ -1168,7 +1300,7 @@
             border-color: #2a2723;
         }
 
-.account-holder {
+        .account-holder {
             font-size: 12px;
             font-weight: 400;
             letter-spacing: 1px;
@@ -1219,7 +1351,7 @@
             object-fit: contain;
             display: block;
             transform: rotate(-2deg);
-            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.08));
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.08));
         }
 
         .rsvp-inner {
@@ -1251,7 +1383,7 @@
             color: #2a2723;
             line-height: 1.6;
             word-break: keep-all;
-            box-shadow: 0 2px 12px rgba(42,35,28,0.08);
+            box-shadow: 0 2px 12px rgba(42, 35, 28, 0.08);
             margin-bottom: 20px;
         }
 
@@ -1351,7 +1483,7 @@
             transition: all 0.25s ease;
         }
 
-        .rsvp-toggle input[type=radio]:checked + label {
+        .rsvp-toggle input[type=radio]:checked+label {
             border-color: #2a2723;
             color: #2a2723;
             background: rgba(42, 35, 28, 0.04);
@@ -1411,16 +1543,27 @@
         }
 
         @media (max-width: 480px) {
-            .section-script { font-size: 56px; }
-            .rsvp-success-script { font-size: 60px; }
+            .section-script {
+                font-size: 56px;
+            }
+
+            .rsvp-success-script {
+                font-size: 60px;
+            }
         }
 
         @media (max-width: 360px) {
-            .section-script { font-size: 48px; }
-            .account-name { font-size: 28px; }
+            .section-script {
+                font-size: 48px;
+            }
+
+            .account-name {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- 풀블리드 이미지 -->
@@ -1569,9 +1712,7 @@
             <div class="map-embed reveal delay-2">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3102735510647!2d127.0416874!3d37.500599599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca400c1f14625%3A0xf9f194cd86337941!2z7LKc7KO86rWQIOyXreyCvOuPmSDshLHri7k!5e0!3m2!1sko!2skr!4v1776781506196!5m2!1sko!2skr"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
@@ -1584,12 +1725,14 @@
                 <div class="transport-item">
                     <button class="transport-toggle" onclick="toggleTransport(this)">
                         <span class="transport-label">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="3" y="1" width="10" height="12" rx="2" stroke="currentColor" stroke-width="1"/>
-                                <circle cx="5.5" cy="11" r="1" fill="currentColor"/>
-                                <circle cx="10.5" cy="11" r="1" fill="currentColor"/>
-                                <line x1="3" y1="5" x2="13" y2="5" stroke="currentColor" stroke-width="1"/>
-                                <line x1="8" y1="1" x2="8" y2="5" stroke="currentColor" stroke-width="1"/>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="1" width="10" height="12" rx="2" stroke="currentColor"
+                                    stroke-width="1" />
+                                <circle cx="5.5" cy="11" r="1" fill="currentColor" />
+                                <circle cx="10.5" cy="11" r="1" fill="currentColor" />
+                                <line x1="3" y1="5" x2="13" y2="5" stroke="currentColor" stroke-width="1" />
+                                <line x1="8" y1="1" x2="8" y2="5" stroke="currentColor" stroke-width="1" />
                             </svg>
                             지하철
                         </span>
@@ -1603,13 +1746,14 @@
                 <div class="transport-item">
                     <button class="transport-toggle" onclick="toggleTransport(this)">
                         <span class="transport-label">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="1" y="4" width="14" height="8" rx="2" stroke="currentColor" stroke-width="1"/>
-                                <circle cx="4" cy="12" r="1.2" fill="currentColor"/>
-                                <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
-                                <line x1="1" y1="7" x2="15" y2="7" stroke="currentColor" stroke-width="1"/>
-                                <line x1="5" y1="4" x2="5" y2="1" stroke="currentColor" stroke-width="1"/>
-                                <line x1="11" y1="4" x2="11" y2="1" stroke="currentColor" stroke-width="1"/>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="4" width="14" height="8" rx="2" stroke="currentColor" stroke-width="1" />
+                                <circle cx="4" cy="12" r="1.2" fill="currentColor" />
+                                <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+                                <line x1="1" y1="7" x2="15" y2="7" stroke="currentColor" stroke-width="1" />
+                                <line x1="5" y1="4" x2="5" y2="1" stroke="currentColor" stroke-width="1" />
+                                <line x1="11" y1="4" x2="11" y2="1" stroke="currentColor" stroke-width="1" />
                             </svg>
                             버스
                         </span>
@@ -1623,10 +1767,11 @@
                 <div class="transport-item">
                     <button class="transport-toggle" onclick="toggleTransport(this)">
                         <span class="transport-label">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="6" width="12" height="7" rx="1" stroke="currentColor" stroke-width="1"/>
-                                <path d="M4 6V4a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1"/>
-                                <circle cx="8" cy="10" r="1.2" fill="currentColor"/>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="6" width="12" height="7" rx="1" stroke="currentColor" stroke-width="1" />
+                                <path d="M4 6V4a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1" />
+                                <circle cx="8" cy="10" r="1.2" fill="currentColor" />
                             </svg>
                             주차
                         </span>
@@ -1680,7 +1825,8 @@
 
                 <div class="rsvp-form-group">
                     <label class="rsvp-label">참석 인원</label>
-                    <input class="rsvp-input" name="count" type="number" min="1" max="10" placeholder="인원 수를 입력해 주세요" value="1">
+                    <input class="rsvp-input" name="count" type="number" min="1" max="10" placeholder="인원 수를 입력해 주세요"
+                        value="1">
                 </div>
 
                 <div class="rsvp-divider"></div>
@@ -1697,12 +1843,12 @@
         <div class="account-inner">
             <div class="account-svg-deco" aria-hidden="true">
                 <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="20" x2="46" y2="20" stroke="rgba(42,35,28,0.2)" stroke-width="0.5"/>
-                    <circle cx="60" cy="20" r="2" fill="rgba(42,35,28,0.25)"/>
-                    <circle cx="60" cy="20" r="5" stroke="rgba(42,35,28,0.15)" stroke-width="0.5" fill="none"/>
-                    <circle cx="52" cy="20" r="1.2" fill="rgba(42,35,28,0.18)"/>
-                    <circle cx="68" cy="20" r="1.2" fill="rgba(42,35,28,0.18)"/>
-                    <line x1="74" y1="20" x2="120" y2="20" stroke="rgba(42,35,28,0.2)" stroke-width="0.5"/>
+                    <line x1="0" y1="20" x2="46" y2="20" stroke="rgba(42,35,28,0.2)" stroke-width="0.5" />
+                    <circle cx="60" cy="20" r="2" fill="rgba(42,35,28,0.25)" />
+                    <circle cx="60" cy="20" r="5" stroke="rgba(42,35,28,0.15)" stroke-width="0.5" fill="none" />
+                    <circle cx="52" cy="20" r="1.2" fill="rgba(42,35,28,0.18)" />
+                    <circle cx="68" cy="20" r="1.2" fill="rgba(42,35,28,0.18)" />
+                    <line x1="74" y1="20" x2="120" y2="20" stroke="rgba(42,35,28,0.2)" stroke-width="0.5" />
                 </svg>
             </div>
             <div class="section-header reveal">
@@ -1714,9 +1860,12 @@
                 <div class="account-card reveal delay-1">
                     <div class="account-card-header" onclick="toggleAccount(this)">
                         <div class="account-name">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:8px;vertical-align:middle;opacity:0.5">
-                                <circle cx="7" cy="4" r="2.5" stroke="currentColor" stroke-width="1"/>
-                                <path d="M2 12c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                style="margin-right:8px;vertical-align:middle;opacity:0.5">
+                                <circle cx="7" cy="4" r="2.5" stroke="currentColor" stroke-width="1" />
+                                <path d="M2 12c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1"
+                                    stroke-linecap="round" />
                             </svg>
                             신랑측
                         </div>
@@ -1725,7 +1874,7 @@
                     <div class="account-card-body">
                         <div class="account-card-divider"></div>
                         <div class="account-bank">신한은행</div>
-                        <div class="account-number">110-000-000000 <span class="account-holder">이원준</span></div>
+                        <div class="account-number">110-285-920083 <span class="account-holder">이원준</span></div>
                         <button class="account-copy-btn" onclick="copyAccount('110-000-000000', this)">
                             계좌번호 복사
                         </button>
@@ -1734,9 +1883,12 @@
                 <div class="account-card reveal delay-2">
                     <div class="account-card-header" onclick="toggleAccount(this)">
                         <div class="account-name">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:8px;vertical-align:middle;opacity:0.5">
-                                <circle cx="7" cy="4" r="2.5" stroke="currentColor" stroke-width="1"/>
-                                <path d="M2 12c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                style="margin-right:8px;vertical-align:middle;opacity:0.5">
+                                <circle cx="7" cy="4" r="2.5" stroke="currentColor" stroke-width="1" />
+                                <path d="M2 12c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1"
+                                    stroke-linecap="round" />
                             </svg>
                             신부측
                         </div>
@@ -1745,7 +1897,7 @@
                     <div class="account-card-body">
                         <div class="account-card-divider"></div>
                         <div class="account-bank">카카오뱅크</div>
-                        <div class="account-number">3333-000-000000 <span class="account-holder">안다연</span></div>
+                        <div class="account-number">0000-000-000000 <span class="account-holder">안다연</span></div>
                         <button class="account-copy-btn" onclick="copyAccount('3333-000-000000', this)">
                             계좌번호 복사
                         </button>
@@ -1824,17 +1976,17 @@
         const currentEl = document.getElementById('galleryCurrent');
         const progressEl = document.getElementById('galleryProgress');
         const totalEl = document.getElementById('galleryTotal');
-        
+
         let gallerySlides = [];
         let galleryTotalCount = 0;
 
         function updateGalleryIndicator() {
             if (!swiper || galleryTotalCount === 0) return;
             // gallery-slide의 첫 번째 요소를 기준으로 너비 계산 (gap 포함)
-            const slideWidth = gallerySlides[0].offsetWidth + 14; 
+            const slideWidth = gallerySlides[0].offsetWidth + 14;
             const index = Math.round(swiper.scrollLeft / slideWidth);
             const clamped = Math.max(0, Math.min(galleryTotalCount - 1, index));
-            
+
             const num = String(clamped + 1).padStart(2, '0');
             currentEl.textContent = num;
             progressEl.style.width = ((clamped + 1) / galleryTotalCount * 100) + '%';
@@ -1842,44 +1994,44 @@
 
         if (swiper) {
             swiper.addEventListener('scroll', updateGalleryIndicator, { passive: true });
-            
+
             // 이미지 동적 로딩 함수
             function loadGalleryImages(index) {
                 const img = new Image();
-                img.onload = function() {
+                img.onload = function () {
                     // 이미지 로드 성공시 슬라이드 추가
                     const slide = document.createElement('div');
                     slide.className = 'gallery-slide';
-                    
+
                     const imgEl = document.createElement('img');
                     imgEl.src = img.src;
                     imgEl.alt = 'Gallery Image ' + index;
-                    
+
                     slide.appendChild(imgEl);
                     swiper.appendChild(slide);
-                    
+
                     // 전역 변수 업데이트
                     gallerySlides = swiper.querySelectorAll('.gallery-slide');
                     galleryTotalCount = gallerySlides.length;
-                    
+
                     // 총 개수 텍스트 업데이트
-                    if(totalEl) totalEl.textContent = String(galleryTotalCount).padStart(2, '0');
-                    
+                    if (totalEl) totalEl.textContent = String(galleryTotalCount).padStart(2, '0');
+
                     // 현재 인디케이터 및 프로그레스 바 갱신
                     updateGalleryIndicator();
-                    
+
                     // 다음 이미지 로드 시도
                     loadGalleryImages(index + 1);
                 };
-                
-                img.onerror = function() {
+
+                img.onerror = function () {
                     // 이미지가 없으면 로딩 중단
                     if (index === 1) {
-                         // 이미지가 하나도 없을 경우의 안내 문구
-                         swiper.innerHTML = '<div style="padding:40px; color:#a89e8f; font-size:14px;">images 폴더에 gallery-1.jpg, gallery-2.jpg... 형식으로 이미지를 추가해주세요.</div>';
+                        // 이미지가 하나도 없을 경우의 안내 문구
+                        swiper.innerHTML = '<div style="padding:40px; color:#a89e8f; font-size:14px;">images 폴더에 gallery-1.jpg, gallery-2.jpg... 형식으로 이미지를 추가해주세요.</div>';
                     }
                 };
-                
+
                 // 이미지 경로 (gallery-1.jpg, gallery-2.jpg, ... 형식으로 찾음)
                 img.src = `./images/gallery-${index}.jpg`;
             }
@@ -1889,7 +2041,7 @@
         }
 
         // 벚꽃 낙화
-        (function() {
+        (function () {
             const canvas = document.getElementById('petalCanvas');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
@@ -2006,4 +2158,5 @@
         }
     </script>
 </body>
+
 </html>
