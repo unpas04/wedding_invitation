@@ -1019,6 +1019,28 @@
             object-fit: cover;
         }
 
+        .location-datetime {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 0.5px solid rgba(42, 35, 28, 0.25);
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: rgba(42, 35, 28, 0.7);
+            font-weight: 400;
+        }
+
+        .location-section .location-datetime {
+            border-color: rgba(42, 35, 28, 0.3);
+            color: rgba(42, 35, 28, 0.8);
+        }
+
+        .location-datetime-sep {
+            font-weight: 200;
+            color: rgba(42, 35, 28, 0.55);
+            font-size: 11px;
+        }
+
         /* 주소 */
         .location-address {
             margin-bottom: 12px;
@@ -1298,6 +1320,26 @@
             background: #2a2723;
             color: #f4f1ec;
             border-color: #2a2723;
+        }
+
+        .account-notice {
+            margin-top: 32px;
+            text-align: left;
+        }
+
+        .account-notice-line {
+            width: 36px;
+            height: 1px;
+            background: rgba(42, 35, 28, 0.2);
+            margin: 0 0 20px;
+        }
+
+        .account-notice-text {
+            font-size: 12px;
+            line-height: 2;
+            letter-spacing: 0.3px;
+            color: #8a7d68;
+            word-break: keep-all;
         }
 
         .account-holder {
@@ -1598,8 +1640,8 @@
             <div class="hero-divider"></div>
 
             <div class="date-info">
-                <div class="date-main">2026 . 05 . 15 &nbsp;·&nbsp; SAT</div>
-                <div class="date-sub">오후 3시 · 역삼동성당</div>
+                <div class="date-main">2026 . 06 . 13 &nbsp;·&nbsp; SAT</div>
+                <div class="date-sub">오후 3시 · 역삼동성당 대성전</div>
             </div>
         </div>
 
@@ -1702,10 +1744,12 @@
             </div>
 
             <div class="location-address reveal delay-1">
+                <div class="location-datetime">2026 · 06 · 13 &nbsp;<span class="location-datetime-sep">|</span>&nbsp;
+                    토요일 &nbsp;<span class="location-datetime-sep">|</span>&nbsp; 오후 3시</div>
                 <div class="location-name">역삼동성당</div>
                 <div class="location-addr">
                     서울특별시 강남구 역삼동 648-9<br>
-                    천주교 서울대교구 역삼동성당
+                    천주교 서울대교구 역삼동성당 대성전
                 </div>
             </div>
 
@@ -1717,8 +1761,8 @@
             </div>
 
             <div class="map-buttons reveal delay-2">
-                <a class="map-btn" href="https://naver.me/FoMKIIFO" target="_blank">네이버맵</a>
-                <a class="map-btn" href="https://place.map.kakao.com/7942011" target="_blank">카카오맵</a>
+                <a class="map-btn" href="https://naver.me/G0DXhxjw" target="_blank">네이버맵</a>
+                <a class="map-btn" href="https://place.map.kakao.com/8013797" target="_blank">카카오맵</a>
             </div>
 
             <div class="transport-list reveal delay-2">
@@ -1769,9 +1813,13 @@
                         <span class="transport-label">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="6" width="12" height="7" rx="1" stroke="currentColor" stroke-width="1" />
-                                <path d="M4 6V4a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1" />
-                                <circle cx="8" cy="10" r="1.2" fill="currentColor" />
+                                <path d="M2 10V12M14 10V12" stroke="currentColor" stroke-width="1"
+                                    stroke-linecap="round" />
+                                <path d="M1 10H15V8L13 4H3L1 8V10Z" stroke="currentColor" stroke-width="1"
+                                    stroke-linejoin="round" />
+                                <circle cx="4.5" cy="10" r="1.2" fill="currentColor" />
+                                <circle cx="11.5" cy="10" r="1.2" fill="currentColor" />
+                                <line x1="5" y1="7" x2="11" y2="7" stroke="currentColor" stroke-width="0.8" />
                             </svg>
                             주차
                         </span>
@@ -1903,6 +1951,16 @@
                         </button>
                     </div>
                 </div>
+            </div>
+
+            <div class="account-notice reveal">
+                <div class="account-notice-line"></div>
+                <p class="account-notice-text">성당 예식 특성상 화환은 정중히 사양합니다.<br>소중한 마음만 담아 자리를 빛내 주세요.</p>
+            </div>
+            <div class="account-notice reveal delay-1">
+                <div class="account-notice-line"></div>
+                <p class="account-notice-text">혼인 미사는 약 1시간 소요됩니다.<br>부담 없이 예식 전 식사를 먼저 즐기시거나,<br>예식 후 자리에 합류하셔도
+                    좋습니다.<br>편하신 방법으로 소중한 걸음 내주세요.</p>
             </div>
         </div>
     </section>
