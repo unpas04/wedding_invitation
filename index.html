@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Wonjune & Dayeon</title>
     <meta property="og:title" content="이원준 ♥ 안다연의 결혼식에 초대합니다">
     <meta property="og:description" content="2026년 6월 13일 토요일 오후 3시 · 역삼동성당">
@@ -41,6 +41,7 @@
         body {
             width: 100%;
             min-height: 100%;
+            touch-action: manipulation;
         }
 
         body {
@@ -2250,6 +2251,54 @@
                 }
             });
         }
+    </script>
+
+    <script>
+        // 모바일 핀치 줌 / 더블탭 줌 / 제스처 줌 완전 차단
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener('gesturechange', function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener('gestureend', function(event) {
+            event.preventDefault();
+        });
+
+        // 더블탭 줌 차단
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 350) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+
+        // 키보드 단축키 줌 차단 (Ctrl/Cmd + +/-/0, Ctrl/Cmd + 휠)
+        document.addEventListener('keydown', function(event) {
+            if ((event.ctrlKey || event.metaKey) &&
+                (event.key === '+' || event.key === '-' || event.key === '=' || event.key === '0')) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('wheel', function(event) {
+            if (event.ctrlKey || event.metaKey) {
+                event.preventDefault();
+            }
+        }, { passive: false });
     </script>
 </body>
 
