@@ -477,26 +477,27 @@
         }
 
         .eyebrow {
-            font-size: 10px;
-            letter-spacing: 5px;
+            font-size: 11.5px;
+            letter-spacing: 7px;
             font-weight: 400;
-            color: rgba(244, 241, 236, 0.95);
-            margin-bottom: 22px;
+            color: rgba(244, 241, 236, 1);
+            margin-bottom: 24px;
             opacity: 0;
             transform: translateY(12px);
             animation: fadeUp 1.6s ease-out 0.9s forwards;
-            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 6px rgba(0, 0, 0, 0.5);
         }
 
         .eyebrow::before,
         .eyebrow::after {
             content: '';
             display: inline-block;
-            width: 18px;
+            width: 22px;
             height: 1px;
-            background: rgba(244, 241, 236, 0.5);
+            background: rgba(244, 241, 236, 0.85);
             vertical-align: middle;
-            margin: 0 10px;
+            margin: 0 12px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .names {
@@ -524,10 +525,10 @@
 
         .names-kr {
             font-family: 'Inter', -apple-system, sans-serif;
-            font-size: 11px;
-            font-weight: 300;
+            font-size: 14px;
+            font-weight: 400;
             letter-spacing: 7px;
-            color: rgba(244, 241, 236, 0.95);
+            color: rgba(244, 241, 236, 0.98);
             margin-top: 18px;
             opacity: 0;
             animation: fadeUp 1.5s ease-out 1.5s forwards;
@@ -561,19 +562,19 @@
         }
 
         .date-main {
-            font-size: 12px;
-            font-weight: 400;
+            font-size: 15px;
+            font-weight: 500;
             letter-spacing: 4px;
             color: #f4f1ec;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.5);
         }
 
         .date-sub {
-            font-size: 10px;
-            font-weight: 300;
+            font-size: 13px;
+            font-weight: 400;
             letter-spacing: 3px;
-            color: rgba(244, 241, 236, 0.85);
+            color: rgba(244, 241, 236, 0.95);
             text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.5);
         }
 
@@ -653,12 +654,12 @@
             }
 
             .names-kr {
-                font-size: 10px;
+                font-size: 12px;
                 letter-spacing: 5px;
             }
 
             .eyebrow {
-                font-size: 9px;
+                font-size: 11px;
                 letter-spacing: 4px;
             }
 
@@ -1366,6 +1367,13 @@
             word-break: keep-all;
         }
 
+        .account-notice-text strong {
+            color: #2a2723;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(42, 39, 35, 0.4);
+            padding-bottom: 1px;
+        }
+
         .account-holder {
             font-size: 12px;
             font-weight: 400;
@@ -1664,7 +1672,7 @@
             <div class="hero-divider"></div>
 
             <div class="date-info">
-                <div class="date-main">2026 . 06 . 13 &nbsp;·&nbsp; SAT</div>
+                <div class="date-main">2026 . 06 . 13 &nbsp;·&nbsp; 토요일</div>
                 <div class="date-sub">오후 3시 · 역삼동성당 대성전</div>
             </div>
         </div>
@@ -2004,7 +2012,7 @@
 
             <div class="account-notice reveal">
                 <div class="account-notice-line"></div>
-                <p class="account-notice-text">성당 예식 특성상 화환과 화분은 정중히 사양하오니<br>따뜻한 마음으로 함께해 주시면 감사하겠습니다.</p>
+                <p class="account-notice-text">성당 예식 특성상 <strong>화환과 화분은 정중히 사양</strong>하오니<br>따뜻한 마음으로 함께해 주시면 감사하겠습니다.</p>
             </div>
             <div class="account-notice reveal delay-1">
                 <div class="account-notice-line"></div>
