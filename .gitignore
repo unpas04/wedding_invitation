@@ -1,0 +1,6 @@
+# 시스템 파일
+.DS_Store
+**/.DS_Store
+
+# 갤러리 원본 이미지 (배포 제외용 - 백업 보관)
+images/originals/
