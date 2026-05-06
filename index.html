@@ -15,6 +15,7 @@
     <meta property="og:image:height" content="1798">
     <meta property="og:image:alt" content="이원준 ♥ 안다연 결혼식 초대">
     <meta property="og:locale" content="ko_KR">
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
     <style>
         @font-face {
             font-family: 'SephoraHayden';
@@ -1388,6 +1389,93 @@
         }
 
         /* ========================================
+           SHARE SECTION (카카오 공유 + 링크 복사)
+           ======================================== */
+        .share-section {
+            width: 100vw;
+            background: #e8e2d6;
+            position: relative;
+            padding: 0 36px 70px;
+            overflow: hidden;
+        }
+
+        .share-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 360px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .share-divider {
+            width: 40px;
+            height: 1px;
+            background: #b8a98a;
+            margin: 0 auto 20px;
+            opacity: 0.6;
+        }
+
+        .share-title {
+            font-family: 'KyoboHandwriting', serif;
+            font-size: 18px;
+            color: #4a4034;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .share-btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 13px 12px;
+            border: none;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .share-btn:active {
+            transform: scale(0.97);
+            opacity: 0.85;
+        }
+
+        .share-btn-kakao {
+            background: #fee500;
+            color: #181600;
+        }
+
+        .share-btn-link {
+            background: #fff;
+            color: #4a4034;
+            border: 1px solid #d4c8b0;
+        }
+
+        .share-btn-link.copied {
+            background: #4a4034;
+            color: #fff;
+            border-color: #4a4034;
+        }
+
+        .share-btn svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ========================================
            RSVP SECTION (흰 배경 + 강아지 키치)
            ======================================== */
         .rsvp-section {
@@ -2027,7 +2115,96 @@
         </div>
     </section>
 
+    <section class="share-section">
+        <div class="share-inner reveal">
+            <div class="share-divider"></div>
+            <p class="share-title">소중한 분들께 전해주세요</p>
+            <div class="share-buttons">
+                <button type="button" class="share-btn share-btn-kakao" onclick="shareToKakao()">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.79 1.86 5.23 4.66 6.62-.2.7-.74 2.62-.85 3.03-.13.5.18.5.39.36.16-.11 2.55-1.73 3.59-2.43.72.1 1.45.16 2.21.16 5.52 0 10-3.48 10-7.74S17.52 3 12 3z"/>
+                    </svg>
+                    카카오톡으로 전하기
+                </button>
+                <button type="button" class="share-btn share-btn-link" onclick="copyInvitationLink(this)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                    </svg>
+                    링크 복사
+                </button>
+            </div>
+        </div>
+    </section>
+
     <script>
+        // 카카오 SDK 초기화
+        if (window.Kakao && !Kakao.isInitialized()) {
+            Kakao.init('a3d5421dee0a3e3f983115c3603e3a1b');
+        }
+
+        const INVITATION_URL = 'https://wedding-invitation-wd.netlify.app/';
+        const INVITATION_IMAGE = 'https://wedding-invitation-wd.netlify.app/images/og-image.jpg';
+
+        // 카카오톡 공유
+        function shareToKakao() {
+            if (!window.Kakao || !Kakao.isInitialized()) {
+                alert('카카오톡 공유를 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.');
+                return;
+            }
+            Kakao.Share.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '이원준 ♥ 안다연의 결혼식에 초대합니다',
+                    description: '2026년 6월 13일 토요일 오후 3시\n역삼동성당',
+                    imageUrl: INVITATION_IMAGE,
+                    imageWidth: 1200,
+                    imageHeight: 1798,
+                    link: {
+                        mobileWebUrl: INVITATION_URL,
+                        webUrl: INVITATION_URL
+                    }
+                },
+                buttons: [
+                    {
+                        title: '청첩장 보러가기',
+                        link: {
+                            mobileWebUrl: INVITATION_URL,
+                            webUrl: INVITATION_URL
+                        }
+                    }
+                ]
+            });
+        }
+
+        // 링크 복사
+        function copyInvitationLink(btn) {
+            const original = btn.innerHTML;
+            const showCopied = () => {
+                btn.classList.add('copied');
+                btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>복사되었습니다';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = original;
+                }, 1800);
+            };
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(INVITATION_URL).then(showCopied).catch(() => fallbackCopy());
+            } else {
+                fallbackCopy();
+            }
+            function fallbackCopy() {
+                const ta = document.createElement('textarea');
+                ta.value = INVITATION_URL;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); showCopied(); } catch (e) { alert('복사에 실패했어요. 주소창의 URL을 직접 복사해 주세요.'); }
+                document.body.removeChild(ta);
+            }
+        }
+
         // 교통편 아코디언
         function toggleTransport(btn) {
             const body = btn.nextElementSibling;
